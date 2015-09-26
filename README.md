@@ -1,2 +1,2 @@
 # Python
-Repositorio de Python, para compartir códigoy solucionar dudas.
+Repositorio de Python, para compart ir código y solucionar dudas.
