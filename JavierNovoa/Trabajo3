@@ -1,0 +1,60 @@
+# FUNCION PROMEDIO ALUMNO
+def promedioAlumno():
+    print('Función promedio alumno -------')
+    nombreAlumno = input('Ingrese el nombre del alumno: ')
+    nota1 = float(input('Ingrese nota 1: '))
+    nota2 = float(input('Ingrese nota 2: '))
+    nota3 = float(input('Ingrese nota 3: '))
+    promedio = (nota1 + nota2 + nota3)/3
+    promedio = round(promedio,2)
+    if(promedio >= 4):
+       print('Promedio del alumno',nombreAlumno,': ',str(promedio))
+       reintentar()
+    else:
+        print('El alumno ',nombreAlumno,' ha reprobado el curso con un promedio de: ',str(promedio))
+        reintentar()
+ # FUNCION SUELDOS   
+def sueldos():
+    def calculosueldos(sueldo1,sueldo2,sueldo3,sueldo4,sueldo5,sueldo6,sueldo7,sueldo8,sueldo9,sueldo10):
+        sumasueldos = sueldo1+sueldo2+sueldo3+sueldo4+sueldo5+sueldo6+sueldo7+sueldo8+sueldo9+sueldo10
+        promediosueldos = sumasueldos/2
+        print(int(promediosueldos))
+    sueldo1 = int(input('Ingrese sueldo 1: '))
+    sueldo2 = int(input('Ingrese sueldo 2: '))
+    sueldo3 = int(input('Ingrese sueldo 3: '))
+    sueldo4 = int(input('Ingrese sueldo 4: '))
+    sueldo5 = int(input('Ingrese sueldo 5: '))
+    sueldo6 = int(input('Ingrese sueldo 6: '))
+    sueldo7 = int(input('Ingrese sueldo 7: '))
+    sueldo8 = int(input('Ingrese sueldo 8: '))
+    sueldo9 = int(input('Ingrese sueldo 9: '))
+    sueldo10 = int(input('Ingrese sueldo 10: '))
+    calculosueldos(sueldo1,sueldo2,sueldo3,sueldo4,sueldo5,sueldo6,sueldo7,sueldo8,sueldo9,sueldo10)
+    reintentar()
+
+# FUNCION REINTENTAR
+def reintentar():
+    volvermenu = input('¿Desea probar otro programa?(Si/No): ')
+    if ( volvermenu == 'Si' ):
+        menu()
+    elif( volvermenu == 'No' ):
+        print('Gracias por utilizar este programa.')
+# FUNCION MENU
+def menu():
+    menu = {}
+    menu['1'] = 'Promedio Alumnos'
+    menu['2'] = 'Sueldo Líquido Promedio'
+    menu['3'] = 'Terminar programa...'
+
+    opciones = list(menu.keys())
+    opciones.sort()
+    for entrada in opciones:
+        print (str(entrada),'--',menu[entrada])
+    seleccion = input('Por favor, selecciones el programa a ejecutar: ')
+    if(seleccion == '1'):
+        promedioAlumno()
+    elif(seleccion == '2'):
+        sueldos()
+    elif(seleccion == '3'):
+        print('Gracias por utilizar este programa.')
+menu()
