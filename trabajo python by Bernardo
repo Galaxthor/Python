@@ -1,0 +1,89 @@
+def menu():
+    print("Bienvenido al Sistema")
+    print("Escriba el N° de su opcion Por favor")
+    print("1 .-Funcion para ver si el Alumno aprueba o no aprueba")
+    print("2 .-Funcion para ver el promedio liquido de 10 Sueldos ")
+    print("3 .-Salir")
+
+    opcion= input("> ")
+
+
+    if opcion == "1":
+        print("Funcion Promedio")
+        
+  
+        promedio()
+        import time;
+        time.sleep( 3 );
+        actualizamenu()
+     
+    elif opcion == "2":
+        j=0
+        print("Funcion Sueldo")
+        for t in range(0,10):
+           
+            bb = float (input("Ingrese sueldo :  "))
+            j = (bb+j)
+
+        int(j)
+
+        sueldos(j)
+        
+        import time;
+        time.sleep( 3 );
+        actualizamenu()
+
+    elif opcion == "3":  
+        print("Usted ha Salido del Programa")
+        import time;
+        time.sleep( 5 );        
+        
+        
+        
+          
+    else :
+        print("La opcion seleccionada no es valida")
+        import time;
+        time.sleep( 3 );
+        actualizamenu()
+
+def promedio():
+    nombre = input("Ingresa el nombre del alumno : ")
+    print("Ingrese las notas con punto(Ejemplo (5.6))")
+    print("Espere 2 Segundos por favor ")
+    import time;
+    time.sleep( 2 );
+    nota1 = float (input("Ingresa primera nota :  "))
+    nota2 = float (input("Ingresa segunda nota :  "))
+    nota3 = float (input("Ingresa tercera nota :  "))
+
+    prome = ((nota1+nota2+nota3)/3)
+
+    if prome>=4.0 :
+        print("",nombre,"  has Aprobado con ",prome," como promedio Final \n********************Felicitaciones***************************\n")
+    else:
+        print("",nombre,"  has Reprobado , Mas Suerte la Proxima Vez")
+
+
+
+def sueldos(m):
+         totali  =(m/10)
+         
+         print("El promedio liquido de tus sueldos es : $",totali)
+                          
+
+def actualizamenu():
+    actu_menu = input('¿Desea volver al Menu Principal ? Escriba(s(si) o n(no)): ')
+    if ( actu_menu == 'S' or actu_menu == 's' ):
+        limpia()
+        menu()
+    elif( actu_menu == 'N' or actu_menu == 'n' ):
+
+        print('ADIOS.')
+
+        
+def limpia():
+ import os
+ os.system ("cls")
+    
+menu()
